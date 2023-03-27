@@ -136,7 +136,7 @@ cout << rank << endl;
 
 ## Installation & Uses
 
-To use the programs include the following .h & .cpp files:
+To use and build off these programs include the following .h & .cpp files:
 
 - Monte Carlo:
   - card, deck, tx_hld_key, hand_eval, and monte_carlo_poker 
