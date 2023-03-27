@@ -15,7 +15,7 @@ A Monte Carlo Algorithm uses repetitive random sampling to determine the probabi
 
 This Monte Carlo Algorithm determines the likelyhood of a player(s)' hand winning or splitting the pot by running *n* iterations of a poker game. In which it deals random cards and determines the winner after every iteration.
 
-This program only has one public funtion which can either print results to the terminal or modify a vector passed through.
+This program only has one public funtion which can either print results to the terminal or modify a vector passed through it.
 
 Public Functin Parameters:
 - Hand     = player's hand = 2 cards
@@ -96,9 +96,18 @@ Hand Rank: 177
 
 ### Database
 
-There are MM unique 5 card poker hands. However, there are only 7,642 different strengths of hands, as demonstrated below.
-
-
+There are $52 \choose 5$ poker hands. However, there are only 7,642 different strengths of hands, as demonstrated below.
+```math
+Straight Flush  =    A to 5 high  =    10
+Four of a Kind  =    13 * 12      =    156                                = 156
+Full House      =    13 * 12      =    156                             = 156
+Flush           =    ((13*12*11*10*9) / (5*4*3*2*1)) - 10    = 1277 (SUBTRACT 10 FOR STRAIGHT FLUSH)
+Straight        =    1608    =    10                                      = 10
+Three of a Kind =    2466    =    13 * ((12*11) / (2*1))                  = 858
+Two Pairs       =    3325    =    ((13*12) / 2) * 11                      
+Pair            =    6185    =    13 * ((12*11*10) / (3*2*1))             
+High Card       =    7462    =    ((13*12*11*10*9) / (5*4*3*2*1)) - 10
+```
 The TexasHoldemKey class defined in tx_hold_key.h & tx_hold_key.cpp creates a hash map of the 7,642 unique hands(key) and ranks(value) them from 0 (Royal Flush) to 7,641 (7,5,4,3,2).
 String Code:
 - Cards sorted by priotity, then value
