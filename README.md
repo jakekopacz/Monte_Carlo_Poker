@@ -136,4 +136,19 @@ cout << rank << endl;
 
 ## Installation & Uses
 
+To use the programs include the following .h & .cpp files:
 
+- Monte Carlo:
+  - card, deck, tx_hld_key, hand_eval, and monte_carlo_poker 
+- Hand Eval:
+  - card.h, deck, tx_hld_key, and hand_eval
+
+To run a monte carlo sim through terminal inputs run: 
+
+```
+>> g++ -std=c++17 card.cpp deck.cpp tx_hld_key.cpp hand_eval.cpp monte_carlo.cpp main.cpp -o sim
+```
+
+To run a command line argument hand evaluator:
+
+>> g++ -std=c++17 card.cpp deck.cpp tx_hld_key.cpp hand_eval.cpp eval_main.cpp -o sim
