@@ -108,7 +108,8 @@ There are $52 \choose 5$ poker hands. However, there are only 7,642 different st
 | Three of a kind | $$13*\frac{12*11}{2*1}\$$   |
 | Two Pairs       | $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$ |
 | Pair            | Content Cell  |
-| High Card       | Content Cell  |
+| High Card       | $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+  |
 ```math
 Straight Flush  =    A to 5 high  =    10 
 Four of a Kind  =    13 * 12      =    156                                = 156
