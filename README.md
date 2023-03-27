@@ -116,12 +116,6 @@ Hand Rank: 177
 
 All 7,642 hands are stored in an unordered_map<string, int> where the key is a 6 character string and the value is 0 - 7,641 (Royal Flush - 7,5,4,3,2)
 
-The only public function hand_rank(string) takes in a 6 character string and returns the hand's rank
-```c++
-int rank = hand_rank("22J94P");
-cout << rank << endl;
->>6112
-
 String Key:
 - Cards sorted by priotity, then value
 - Last character represents hand type
@@ -133,10 +127,13 @@ Hash Map:
 - "AKQJTR" = 0     - Royal Flush
 - "75432C" = 7,641 - 7,5,4,3,2 off suit
 
-## Installation & Running
+The only public function hand_rank(string) takes in a 6 character string and returns the hand's rank
+```c++
+int rank = hand_rank("22J94P");
+cout << rank << endl;
+>>6112
+```
 
+## Installation & Uses
 
-## Implimentation
-
-### Uses
 
