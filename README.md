@@ -6,17 +6,18 @@ Monte Carlo Simulation for Texas Holdem Poker
 A Monte Carlo Algorithm uses repetitive random sampling to determine the probability of an event.
 This project is written 100% if C++17 using only the standard library. 
 - Included in this project:
-  - Monte Carlo Algorithm class
-  - Poker Hand Evaluator class
-  - Poker Hand Database class
+  - Monte Carlo Algorithm
+  - Poker Hand Evaluator
+  - Poker Hand Rank Dictionary
   - Card Class
 
 ### Monte Carlo Algorithm
 
 This Monte Carlo Algorithm determines the likelyhood of a player(s)' hand winning or splitting the pot by running *n* iterations of a poker game. In which it deals random cards and determines the winner after every iteration.
 
+This program only has one public funtion which can either print results to the terminal or modify a vector passed through.
 
-Public Functin 
+Public Functin Parameters:
 - Hand     = player's hand = 2 cards
 - com      = games' com cards, 0 - 5
 - nc       = number of com cards
@@ -92,8 +93,6 @@ Eigth of Clubs
 Best Hand: AAA22H
 Hand Rank: 177
 ```
-Ace of Clubs, Ace of Diamonds, Ace of Hearts, 2 of Clubs, 2 of Diamonds, 2
-Returns the score of the best hand 0 - 7,641 d
 
 ### Database
 
