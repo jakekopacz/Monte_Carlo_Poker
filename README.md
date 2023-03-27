@@ -94,7 +94,7 @@ Best Hand: AAA22H
 Hand Rank: 177
 ```
 
-### Database
+### Poker Hand Dictionary
 
 <details>
 
@@ -113,10 +113,18 @@ Hand Rank: 177
 | High Card       | $$\frac{13\cdot12\cdot11\cdot10\cdot9}{5\cdot4\cdot3\cdot2\cdot1}-10$$| 1277 | 7,642 |
 
 </details>
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-The TexasHoldemKey class defined in tx_hold_key.h & tx_hold_key.cpp creates a hash map of the 7,642 unique hands(key) and ranks(value) them from 0 (Royal Flush) to 7,641 (7,5,4,3,2).
-String Code:
+
+All 7,642 hands are stored in an unordered_map<string, int> where the key is a 6 character string and the value is 0 - 7,641 (Royal Flush - 7,5,4,3,2)
+
+The only public function hand_rank(string) takes in a 6 character string and returns the hand's rank
+```c++
+int rank = hand_rank("22J94P");
+cout << rank << endl;
+>>6112
+
+String Key:
 - Cards sorted by priotity, then value
+- Last character represents hand type
   - "22J94P" -> Pair of 2s
   - "AJ739F" -> Flush Ace High
   - "JJ77K+" -> 2 pairs Jacks & 7s, high card King
@@ -125,14 +133,8 @@ Hash Map:
 - "AKQJTR" = 0     - Royal Flush
 - "75432C" = 7,641 - 7,5,4,3,2 off suit
 
-The public function int hand_rank(std::sting hand) takes in a 6 character string and returns the hand's rank
-
-
 ## Installation & Running
 
-```
-$ pip install deuces
-```
 
 ## Implimentation
 
