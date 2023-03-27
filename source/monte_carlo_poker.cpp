@@ -116,7 +116,7 @@ void Monte::run_round(std::vector<int>& winners) {
 
 
     // determine winner(s)
-    int best = INT_MAX;
+    int best = 21474836;
     int p;
     for (int i = 0; i < this->n_players; i++) {
         if (ranks.at(i) < best) {

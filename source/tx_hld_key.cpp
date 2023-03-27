@@ -60,7 +60,7 @@ void TexasHoldemKey::make_straight_flush() {
         hand.at(3)--;
         hand.at(4)--;
 
-        hand.at(4) == -1 ? hand.at(4) = 12 : NULL;
+        if (hand.at(4) == -1) { hand.at(4) = 12; }
     }
 
 }
@@ -151,7 +151,7 @@ void TexasHoldemKey::make_straight() {
         hand.at(2)--;
         hand.at(3)--;
         hand.at(4)--;
-        hand.at(4) == -1 ? hand.at(4) = 12 : NULL;
+        if (hand.at(4) == -1) { hand.at(4) = 12; }
     }
 
 }

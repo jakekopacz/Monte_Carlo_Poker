@@ -134,7 +134,7 @@ std::string HandEval::make_str(int card_num, int reps, bool decrement) {
         // if straight
         if ( decrement ) {
             card_num--; 
-            card_num < 0 ? card_num = 12: NULL;
+            if (card_num < 0) { card_num = 12; }
         }
     }
 

@@ -121,11 +121,10 @@ void make_others(std::vector<std::vector<Card*> >& other_hands, int n_others) {
 
 void delete_others(std::vector<std::vector<Card*> >& other_hands) {
 
-    int n = other_hands.size();
+
     while (!other_hands.empty()) {
 
         while (!other_hands.back().empty()) {
-            f++;
             delete other_hands.back().back();
             other_hands.back().pop_back();
         }
