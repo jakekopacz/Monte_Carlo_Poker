@@ -150,5 +150,6 @@ To run a monte carlo sim through terminal inputs run:
 ```
 
 To run a command line argument hand evaluator:
-
+```
 >> g++ -std=c++17 card.cpp deck.cpp tx_hld_key.cpp hand_eval.cpp eval_main.cpp -o sim
+```
