@@ -5,9 +5,9 @@ Monte Carlo Simulation for Texas Holdem Poker
 
 ## Overview
 
-### Monte Carlo Algorithm
- 
 A Monte Carlo Algorithm uses repetitive random sampling to determine the probability of an event.
+
+### Monte Carlo Algorithm
 
 This Monte Carlo Algorithm determines the likelyhood of a player(s)' hand winning or splitting the pot by running *n* iterations of a poker game. In which it deals random cards and determines the winner after every iteration.
 
@@ -24,7 +24,7 @@ Public Functin
 ```c++
 void Monte::sim( vector<Card*>& hand, vector<Card*>& com, unsigned int nc, unsigned int np, unsigned int it, vector<vector<Card*> >* others_cards, vector<vector<int> >* results)
 ```
-
+Example of 1:
 ```
 Community Cards = Ace of Hearts, 2 of Spades, 5 of Clubs
 Player Cards = Ace of Clubs, Ace of Diamonds
@@ -35,7 +35,7 @@ sim(hand, com, 3, 4, 10000, NULL, NULL);
 Player Wins:   8303    83.03%
 Player Splits: 78    0.78%
 ```
-
+Example 2:
 ```
 Community Cards = Ace of Hearts, 2 of Spades, 5 of Clubs
 Player 1 Cards = Ace of Clubs, Ace of Diamonds
@@ -59,6 +59,7 @@ Player 3 Splits: 0
 Player 4 Wins:   384
 Player 4 Splits: 0
 ```
+
 ### Hand Evaluator
 
 The HandEval class defined in hand_eval.h & hand_eval.cpp evaluates a 5 - 7 card hand and determines the best hand. This is achieved primarily through algorithms using hashmaps.
