@@ -12,7 +12,7 @@ A Monte Carlo Algorithm uses repetitive random sampling to determine the probabi
 This Monte Carlo Algorithm determines the likelyhood of a player(s)' hand winning or splitting the pot by running *n* iterations of a poker game. In which it deals random cards and determines the winner after every iteration.
 
 
-Public Function
+Public Functin 
 - Hand     = player's hand = 2 cards
 - com      = games' com cards, 0 - 5
 - nc       = number of com cards
@@ -22,8 +22,7 @@ Public Function
 - results  = will set vector to results, NULL if just want a terminal print out (row = player) (column 1 = wins, column 2 = splits)
 
 ```c++
-void Monte::sim(std::vector<Card*>& hand, std::vector<Card*>& com, unsigned int nc, unsigned int np, unsigned int it, 
-                std::vector<std::vector<Card*> >* others_cards, std::vector<std::vector<int> >* results)
+void Monte::sim( vector<Card*>& hand, vector<Card*>& com, unsigned int nc, unsigned int np, unsigned int it, vector<vector<Card*> >* others_cards, vector<vector<int> >* results)
 ```
 
 ```
