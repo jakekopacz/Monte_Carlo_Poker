@@ -5,19 +5,90 @@ Monte Carlo Simulation for Texas Holdem Poker
 
 ## Overview
 
-### Monte Carlo Simulation
+### Monte Carlo Algorithm
+ 
+A Monte Carlo Algorithm uses repetitive random sampling to determine the probability of an event.
 
-The Monte Carlo Simulation runs n games determining winners based on best hand
+This Monte Carlo Algorithm determines the likelyhood of a player(s)' hand winning or splitting the pot by running *n* iterations of a poker game. In which it deals random cards and determines the winner after every iteration.
 
+
+Public Function
+- Hand     = player's hand = 2 cards
+- com      = games' com cards, 0 - 5
+- nc       = number of com cards
+- np       = number of players (player + other)
+- it       = number of iterations for simulation to run
+- others   = other players cards, NULL if unknown
+- results  = will set vector to results, NULL if just want a terminal print out (row = player) (column 1 = wins, column 2 = splits)
+
+```c++
+void Monte::sim(std::vector<Card*>& hand, std::vector<Card*>& com, unsigned int nc, unsigned int np, unsigned int it, std::vector<std::vector<Card*> >* others_cards, std::vector<std::vector<int> >* results)
+```
+
+```c++
+Community Cards = Ace of Hearts, 2 of Spades, 5 of Clubs
+Player Cards = Ace of Clubs, Ace of Diamonds
+sim(hand, com, 3, 4, 10000, NULL, NULL);
+
+***** OUT OF 10000 GAMES *****
+
+Player Wins:   8303    83.03%
+Player Splits: 78    0.78%
+```
+
+```c++
+Community Cards = Ace of Hearts, 2 of Spades, 5 of Clubs
+Player 1 Cards = Ace of Clubs, Ace of Diamonds
+Player 2 Cards = Ace of Spades, Five of Diamonds
+Player 3 Cards = 6 of Hearts, 7 of Spades
+Player 4 Cards = 8 of Hearts, 9 of Hearts
+
+sim(hand, com, 3, 4, 1000, &others, NULL);
+
+***** OUT OF 10000 GAMES *****
+
+Player 1 Wins:   9149
+Player 1 Splits: 0
+
+Player 2 Wins:   17
+Player 2 Splits: 0
+
+Player 3 Wins:   450
+Player 3 Splits: 0
+
+Player 4 Wins:   384
+Player 4 Splits: 0
+```
 ### Hand Evaluator
 
 The HandEval class defined in hand_eval.h & hand_eval.cpp evaluates a 5 - 7 card hand and determines the best hand. This is achieved primarily through algorithms using hashmaps.
 
 
-The public 
-```c++
->>> std::string best_hand(std::vector<Card*>& cards);
+Returns the best hand out of the cards passed through. Return string is 6 char long, and the same format used in the TexasHoldemKey.
+```cpp
+std::string best_hand(std::vector<Card*>& cards);
 ```
+Returns the rank of the best hand out of the cards passed through.
+```cpp
+int eval(std::vector<Card*>& cards);
+```
+Example of seven cards passed through
+```
+./handEval 12 25 38 0 13 44 6
+Cards: 
+Ace of Clubs
+Ace of Diamonds
+Ace of Hearts
+Two of Clubs
+Two of Diamonds
+Seven of Spades
+Eigth of Clubs
+
+Best Hand: AAA22H
+Hand Rank: 177
+```
+Ace of Clubs, Ace of Diamonds, Ace of Hearts, 2 of Clubs, 2 of Diamonds, 2
+Returns the score of the best hand 0 - 7,641 d
 
 ### Database
 
