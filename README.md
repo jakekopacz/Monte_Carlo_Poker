@@ -103,9 +103,9 @@ There are $52 \choose 5$ poker hands. However, there are only 7,642 different st
 | Straight Flush  | $$10$$  |
 | Four of a Kind  | $$13*12$$  |
 | Full House      | $$13*12$$  |
-| Flush           | $$\frac{\left(13\cdot12\cdot11\cdot10\cdot9\right)}{\left(5\cdot4\cdot3\cdot2\cdot1\right)}$$  |
-| Straight        | $10$  |
-| Three of a kind | $$13*\frac{12*11}{2*1}\$$   |
+| Flush           | $$\frac{\left13\cdot12\cdot11\cdot10\cdot9\right}{\left5\cdot4\cdot3\cdot2\cdot1\right}-10$$  |
+| Straight        | $$10$$  |
+| Three of a kind | $$13*$$\frac{\left12\cdot11\righ)}{\leftcdot2\cdot1\right}  |
 | Two Pairs       | $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$ |
 | Pair            | Content Cell  |
 | High Card       | $$\left( \sum_{k=1}^n a_k b_k \right)^2$$|
