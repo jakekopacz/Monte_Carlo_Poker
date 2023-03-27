@@ -100,7 +100,15 @@ There are MM unique 5 card poker hands. However, there are only 7,642 different 
 
 
 The TexasHoldemKey class defined in tx_hold_key.h & tx_hold_key.cpp creates a hash map of the 7,642 unique hands(key) and ranks(value) them from 0 (Royal Flush) to 7,641 (7,5,4,3,2).
+String Code:
+- Cards sorted by priotity, then value
+  - "22J94P" -> Pair of 2s
+  - "AJ739F" -> Flush Ace High
+  - "JJ77K+" -> 2 pairs Jacks & 7s, high card King
 
+Hash Map: 
+- "AKQJTR" = 0     - Royal Flush
+- "75432C" = 7,641 - 7,5,4,3,2 off suit
 
 The public function int hand_rank(std::sting hand) takes in a 6 character string and returns the hand's rank
 
