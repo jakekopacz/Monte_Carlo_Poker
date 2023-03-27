@@ -97,8 +97,20 @@ Hand Rank: 177
 ### Database
 
 There are $52 \choose 5$ poker hands. However, there are only 7,642 different strengths of hands, as demonstrated below.
+
+| Hand Type  | Second Header |
+| --------------- | ------------- |
+| Straight Flush  | Content Cell  |
+| Four of a Kind  | Content Cell  |
+| Full House      | Content Cell  |
+| Flush           | Content Cell  |
+| Straight        | Content Cell  |
+| Three of a kind | Content Cell  |
+| Two Pairs       | Content Cell  |
+| Pair            | Content Cell  |
+| High Card       | Content Cell  |
 ```math
-Straight Flush  =    A to 5 high  =    10
+Straight Flush  =    A to 5 high  =    10 
 Four of a Kind  =    13 * 12      =    156                                = 156
 Full House      =    13 * 12      =    156                             = 156
 Flush           =    ((13*12*11*10*9) / (5*4*3*2*1)) - 10    = 1277 (SUBTRACT 10 FOR STRAIGHT FLUSH)
