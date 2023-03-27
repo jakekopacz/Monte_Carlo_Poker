@@ -22,10 +22,11 @@ Public Function
 - results  = will set vector to results, NULL if just want a terminal print out (row = player) (column 1 = wins, column 2 = splits)
 
 ```c++
-void Monte::sim(std::vector<Card*>& hand, std::vector<Card*>& com, unsigned int nc, unsigned int np, unsigned int it, std::vector<std::vector<Card*> >* others_cards, std::vector<std::vector<int> >* results)
+void Monte::sim(std::vector<Card*>& hand, std::vector<Card*>& com, unsigned int nc, unsigned int np, unsigned int it, 
+                std::vector<std::vector<Card*> >* others_cards, std::vector<std::vector<int> >* results)
 ```
 
-```c++
+```
 Community Cards = Ace of Hearts, 2 of Spades, 5 of Clubs
 Player Cards = Ace of Clubs, Ace of Diamonds
 sim(hand, com, 3, 4, 10000, NULL, NULL);
@@ -36,7 +37,7 @@ Player Wins:   8303    83.03%
 Player Splits: 78    0.78%
 ```
 
-```c++
+```
 Community Cards = Ace of Hearts, 2 of Spades, 5 of Clubs
 Player 1 Cards = Ace of Clubs, Ace of Diamonds
 Player 2 Cards = Ace of Spades, Five of Diamonds
