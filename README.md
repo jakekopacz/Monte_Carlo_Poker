@@ -98,7 +98,7 @@ Hand Rank: 177
 
 <details>
 
-<summary>There are $52 \choose 5$ poker hands. However, there are only 7,642 different strengths of hands, as demonstrated below.</summary>
+<summary>**There are $52 \choose 5$ poker hands. However, there are only 7,642 different strengths of hands, as demonstrated by clicking this drop down.**</summary>
   
 | Hand Type       | Second Header | Number of hands | Sum of Hands|
 | :-------------- | :---------------------: | :---: | :---: |
@@ -113,18 +113,6 @@ Hand Rank: 177
 | High Card       | $$\frac{13\cdot12\cdot11\cdot10\cdot9}{5\cdot4\cdot3\cdot2\cdot1}-10$$| 1277 | 7,642 |
 
 </details>
-
-```math
-Straight Flush  =    A to 5 high  =    10 
-Four of a Kind  =    13 * 12      =    156                                = 156
-Full House      =    13 * 12      =    156                             = 156
-Flush           =    ((13*12*11*10*9) / (5*4*3*2*1)) - 10    = 1277 (SUBTRACT 10 FOR STRAIGHT FLUSH)
-Straight        =    1608    =    10                                      = 10
-Three of a Kind =    2466    =    13 * ((12*11) / (2*1))                  = 858
-Two Pairs       =    3325    =    ((13*12) / 2) * 11                      
-Pair            =    6185    =    13 * ((12*11*10) / (3*2*1))             
-High Card       =    7462    =    ((13*12*11*10*9) / (5*4*3*2*1)) - 10
-```
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 The TexasHoldemKey class defined in tx_hold_key.h & tx_hold_key.cpp creates a hash map of the 7,642 unique hands(key) and ranks(value) them from 0 (Royal Flush) to 7,641 (7,5,4,3,2).
 String Code:
