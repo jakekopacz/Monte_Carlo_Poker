@@ -98,7 +98,7 @@ Hand Rank: 177
 
 <details>
 
-<summary>**There are $52 \choose 5$ poker hands. However, there are only 7,642 different strengths of hands, as demonstrated by clicking this drop down.**</summary>
+**<summary>There are $52 \choose 5$ poker hands. However, there are only 7,642 different strengths of hands, as demonstrated by clicking this drop down.</summary>**
   
 | Hand Type       | Second Header | Number of hands | Sum of Hands|
 | :-------------- | :---------------------: | :---: | :---: |
