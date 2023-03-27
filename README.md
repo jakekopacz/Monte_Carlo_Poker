@@ -120,6 +120,7 @@ Two Pairs       =    3325    =    ((13*12) / 2) * 11
 Pair            =    6185    =    13 * ((12*11*10) / (3*2*1))             
 High Card       =    7462    =    ((13*12*11*10*9) / (5*4*3*2*1)) - 10
 ```
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 The TexasHoldemKey class defined in tx_hold_key.h & tx_hold_key.cpp creates a hash map of the 7,642 unique hands(key) and ranks(value) them from 0 (Royal Flush) to 7,641 (7,5,4,3,2).
 String Code:
 - Cards sorted by priotity, then value
