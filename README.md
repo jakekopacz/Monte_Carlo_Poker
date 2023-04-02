@@ -3,7 +3,7 @@
 Monte Carlo Simulation for Texas Holdem Poker written 100% in C++ using only the standard library.
 
 ## Overview
-A Monte Carlo Algorithm uses repetitive random sampling to determine the probability of an event. This project takes this concept and applies it to determine the probability of poker hands.
+A Monte Carlo Algorithm uses repetitive random sampling to determine the probability of an event. This project takes this concept and applies it to determine the probability of outcomes based on poker hands.
 
 - Included in this project:
   - Monte Carlo Algorithm
